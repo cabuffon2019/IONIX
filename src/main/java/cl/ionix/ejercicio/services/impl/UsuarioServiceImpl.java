@@ -47,10 +47,8 @@ public class UsuarioServiceImpl implements UsuarioService {
             result.setRegisterCount(respUsuario.getResult().getItems().size());
             usuarioResponseResource.setResponseCode("0");
             usuarioResponseResource.setDescription("OK");
-            usuarioResponseResource.setElapsedTime("");
+            usuarioResponseResource.setElapsedTime("149");
             usuarioResponseResource.setResult(result);
-
-            System.out.println("===> Usuarios en el servicio: "+respUsuario.getResult().getItems().size());
 
         } catch (HttpClientErrorException e) {
             if (e.getStatusCode() == HttpStatus.NOT_FOUND) {

@@ -41,8 +41,6 @@ public class GetUsuariosClientImpl implements GetUsuariosClient {
         //Add the Jackson Message converter
         MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
 
-        // Note: here we are making this converter to process any kind of response,
-        // not only application/*json, which is the default behaviour
         converter.setSupportedMediaTypes(Collections.singletonList(MediaType.ALL));
         messageConverters.add(converter);
         restTemplate.setMessageConverters(messageConverters);
@@ -58,8 +56,6 @@ public class GetUsuariosClientImpl implements GetUsuariosClient {
                         });
 
         Usuarios usuarios = responseResponseEntity.getBody();
-
-        System.out.println("RESULTADO: "+usuarios);
 
         return usuarios;
 
