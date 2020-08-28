@@ -1,10 +1,8 @@
 package cl.ionix.ejercicio.services.impl;
 
 import cl.ionix.ejercicio.client.impl.GetUsuariosClientImpl;
-import cl.ionix.ejercicio.dto.FarmaciaResponseResource;
 import cl.ionix.ejercicio.dto.Result;
 import cl.ionix.ejercicio.dto.UsuarioResponseResource;
-import cl.ionix.ejercicio.exception.ConsorcioPharmacyException;
 import cl.ionix.ejercicio.model.Usuarios;
 import cl.ionix.ejercicio.services.UsuarioService;
 import cl.ionix.ejercicio.utils.ApplicationConstants;
@@ -26,12 +24,11 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 
     /**
-     * Method to obtain shift pharmacies by region
-     * filtered by comuna and local.
+     * Method to obtain users
+     * filtered by rut.
      *
      * @param rut
-     * @return farmaciaResponseResource
-     * @throws ConsorcioPharmacyException
+     * @return usuarioResponseResource
      */
     @Override
     public UsuarioResponseResource usuarioResponseResource(String rut)  {
