@@ -1,18 +1,18 @@
 package cl.ionix.ejercicio.exception;
 
-public class ConsorcioPharmacyException extends RuntimeException {
+public class IonixException extends RuntimeException {
     private String errorMessage = "";
 
-    public ConsorcioPharmacyException(String message) {
+    public IonixException(String message) {
         super(message);
     }
 
-    public ConsorcioPharmacyException(Exception e) {
+    public IonixException(Exception e) {
         super(e);
         errorMessage = e.getMessage();
     }
 
-    public ConsorcioPharmacyException(Exception e, String msg) {
+    public IonixException(Exception e, String msg) {
         super(e);
         errorMessage = msg;
     }
